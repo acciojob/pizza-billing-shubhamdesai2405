@@ -40,6 +40,8 @@ public class DeluxePizza extends Pizza {
         }
         if(cheese&&del){
             Bill += "Extra Cheese Added: "+"80"+"\n";
+        }else{
+            Bill += "Extra Cheese Added: "+"0"+"\n";
         }
         if(topping&&del){
             if(isVeg){
@@ -47,8 +49,14 @@ public class DeluxePizza extends Pizza {
             }else{
                 Bill +=  "Extra Toppings Added: "+"120"+"\n";
             }
+        }else{
+            if(isVeg){
+                Bill +=  "Extra Toppings Added: "+"0"+"\n";
+            }else{
+                Bill +=  "Extra Toppings Added: "+"0"+"\n";
+            }
         }
-        if(bag&&del){
+        if(bag){
             Bill += "Paperbag Added: "+"20"+"\n";
 
         }
@@ -57,12 +65,5 @@ public class DeluxePizza extends Pizza {
         this.bill = Bill;
         return this.bill;
     }
-    public void addTakeaway(){
 
-        if(!bag&&del){
-            this.bag=true;
-            setPrice(20);
-        }
-        // your code goes here
-    }
 }
