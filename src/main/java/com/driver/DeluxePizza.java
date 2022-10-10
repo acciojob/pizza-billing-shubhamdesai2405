@@ -19,7 +19,7 @@ public class DeluxePizza extends Pizza {
 
     public void addExtraToppings(){
 
-        if(!topping&&del){
+        if(!topping&&del&&cheese){
             this.topping=true;
             int vegTopping = 70;
             int nonVegTopping = 120;
