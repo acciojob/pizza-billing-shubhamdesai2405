@@ -5,7 +5,7 @@ public class Pizza {
      int price;
     Boolean isVeg;
     String bill;
- boolean del =true;
+
      boolean cheese=false;
    boolean topping =false;
      boolean bag=false;
@@ -34,7 +34,7 @@ public class Pizza {
 
     public void addExtraCheese(){
 
-        if(!cheese&&del){
+        if(!cheese){
             this.cheese=true;
             setPrice(80);
         }
@@ -43,7 +43,7 @@ public class Pizza {
 
     public void addExtraToppings(){
 
-        if(!topping&&del&&cheese){
+        if(!topping){
             this.topping=true;
             int vegTopping = 70;
             int nonVegTopping = 120;
@@ -72,10 +72,10 @@ public class Pizza {
         }else{
             Bill += "Base Price Of The Pizza: " + "400" + "\n";
         }
-        if(cheese&&del){
+        if(cheese){
             Bill += "Extra Cheese Added: "+"80"+"\n";
         }
-        if(topping&&del){
+        if(topping){
             if(isVeg){
               Bill +=  "Extra Toppings Added: "+"70"+"\n";
             }else{
