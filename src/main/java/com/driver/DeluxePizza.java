@@ -48,7 +48,7 @@ public class DeluxePizza extends Pizza {
                 Bill +=  "Extra Toppings Added: "+"120"+"\n";
             }
         }
-        if(bag){
+        if(bag&&del){
             Bill += "Paperbag Added: "+"20"+"\n";
 
         }
@@ -56,5 +56,13 @@ public class DeluxePizza extends Pizza {
         // your code goes here
         this.bill = Bill;
         return this.bill;
+    }
+    public void addTakeaway(){
+
+        if(!bag&&del){
+            this.bag=true;
+            setPrice(20);
+        }
+        // your code goes here
     }
 }
