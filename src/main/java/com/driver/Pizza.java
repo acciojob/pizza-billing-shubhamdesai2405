@@ -94,7 +94,7 @@ boolean isBillGenerated;
             Bill += "Total Price: " + "" + this.price;
             // your code goes here
             this.bill = Bill;
-            return this.bill;
+
         }
 
         return this.bill;
